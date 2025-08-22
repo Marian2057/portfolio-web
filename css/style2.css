@@ -1,0 +1,247 @@
+/* ======= Estilos generales ======= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f9fa;
+    color: #2b2b2b;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    background-color: white;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav {
+    width: 100%;
+}
+
+.logo-header {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #484848;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: all 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    border-bottom: 2px solid #5a9089;
+    padding-bottom: 3px;
+}
+
+.hamburger {
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: #5a9089;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #5a9089;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 15px;
+        font-size: 18px;
+        color: white;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+}
+
+main {
+    width: 100%;
+    padding-top: 120px;
+}
+
+.hero {
+    text-align: center;
+    padding: 180px 20px 60px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 15px 0;
+    color: #333;
+}
+
+.btn-hero {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: #5a9089;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-hero:hover {
+    background-color: #457670;
+}
+
+.redes {
+    margin-top: 25px;
+}
+
+.redes a img {
+    width: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.redes a img:hover {
+    transform: scale(1.2);
+}
+
+h2 {
+    color: #5a9089;
+    font-size: 2.5em;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.filtros {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.filtro {
+    background-color: transparent;
+    border: 2px solid #aac4c0;
+    color: #5a9089;
+    padding: 10px 15px;
+    font-size: 14px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.filtro:hover {
+    background-color: #5a9089;
+    color: white;
+}
+
+.filtro.activo {
+    background-color: #5a9089;
+    color: white;
+    border: 2px solid #5a9089;
+}
+
+.contenedor-proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.proyecto {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 350px;
+    height: 350px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.proyecto:hover {
+    transform: scale(1.05);
+}
+
+.proyecto.hidden {
+    display: none;
+}
+
+#contacto p a {
+    color: #5a9089;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #eaeaea;
+}
+
+#contacto p a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    color: #333;
+    margin-top: 50px;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+}
